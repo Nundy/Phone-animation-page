@@ -1,0 +1,338 @@
+/* 第一屏 */
+.screen-1_heading,
+.screen-1_iphone,
+.screen-1_shadow {
+  transition: all .5s;
+}
+
+.screen-1_heading_animate_init {
+  opacity: 0;
+  transform: translate(0,100%);
+}
+
+.screen-1_iphone_animate_init {
+  opacity: 0;
+  transform: translate(0,-100%);
+}
+
+.screen-1_shadow_animate_init {
+   opacity: 0;
+  transform: translate(0,100%);
+}
+
+.screen-1_heading_animate_done,
+.screen-1_iphone_animate_done,
+.screen-1_shadow_animate_done {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+
+/* 第二屏幕 */
+
+.screen-2_heading,
+.screen-2_iphone,
+.screen-2_subHeading {
+  transition: all .5s;
+}
+
+.screen-2_heading_animate_init {
+  opacity: 0;
+  transform: translate(0,-50%);
+}
+
+.screen-2_iphone_animate_init {
+  opacity: 0;
+  transform: translate(0,50%);
+}
+
+.screen-2_subHeading_animate_init {
+  opacity: 0;
+  transform: translate(0,100%);
+}
+
+.screen-2_heading_animate_done,
+.screen-2_iphone_animate_done,
+.screen-2_subHeading_animate_done {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.screen-2_point {
+  transition: all .5s .5s;
+}
+
+.screen-2_point_i-1_animate_init {
+  opacity: 0;
+  transform: translate(-100%,0);
+}
+
+.screen-2_point_i-2_animate_init,
+.screen-2_point_i-3_animate_init {
+  opacity: 0;
+  transform: translate(100%,0);
+}
+
+.screen-2_point_i-1_animate_done,
+.screen-2_point_i-2_animate_done,
+.screen-2_point_i-3_animate_done {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+
+/* 第三屏 */
+.screen-3_heading,
+.screen-3_subHeading,
+.screen-3_feature_item {
+  transition: all .5s;
+}
+
+.screen-3_feature {
+  transition: all 1s 1s;
+}
+
+.screen-3_heading_animate_init {
+  opacity: 0;
+  transform: translate(0,-50%);
+}
+
+.screen-3_iphone {
+  transition: all .8s .5s;
+}
+.screen-3_iphone_animate_init {
+  opacity: 0;
+  transform: translate(0,100%);
+}
+
+.screen-3_subHeading_animate_init {
+  opacity: 0;
+  transform: translate(0,100%);
+}
+
+.screen-3_feature_animate_init {
+  opacity: 0;
+  transform:scale(.5);
+}
+
+.screen-3_heading_animate_done,
+.screen-3_iphone_animate_done,
+.screen-3_subHeading_animate_done {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.screen-3_feature_animate_done {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.screen-3_feature_item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border: 1px solid #fff;
+}
+
+
+/* 第四屏 */
+.screen-4_heading,
+.screen-4_subHeading {
+  transition: all .5s;
+}
+
+
+.screen-4_heading_animate_init {
+  opacity: 0;
+  transform: translate(0,-50%);
+}
+
+.screen-4_subHeading_animate_init {
+  opacity: 0;
+  transform: translate(0,50%);
+}
+
+
+.screen-4_heading_animate_done,
+.screen-4_subHeading_animate_done {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.screen-4_type_item_i_1 {
+  transition: all .7s .5s;
+}
+
+.screen-4_type_item_i_2 {
+  transition: all .7s .8s;
+}
+
+.screen-4_type_item_i_3 {
+  transition: all .7s 1.1s;
+}
+
+.screen-4_type_item_i_4 {
+  transition: all .7s 1.4s;
+}
+
+.screen-4_type_item_i_1_animate_init,
+.screen-4_type_item_i_2_animate_init,
+.screen-4_type_item_i_3_animate_init,
+.screen-4_type_item_i_4_animate_init {
+  transform: translate(0,150%);
+  opacity: 0;
+}
+
+.screen-4_type_item_i_1_animate_done,
+.screen-4_type_item_i_2_animate_done,
+.screen-4_type_item_i_3_animate_done,
+.screen-4_type_item_i_4_animate_done {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+
+/* 第五屏 */
+.screen-5_heading,
+.screen-5_subHeading {
+  transition: all .5s;
+}
+
+.screen-5_heading_animate_init {
+  opacity: 0;
+  transform: translate(0,-50%);
+}
+
+.screen-5_subHeading_animate_init {
+  opacity: 0;
+  transform: translate(0,100%);
+}
+
+.screen-5_background {
+  transition: all 1s .5s;
+}
+
+.screen-5_background_animate_init {
+  opacity: 0;
+  transform: scale(.8);
+}
+
+.screen-5_background_animate_done {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.screen-5_heading_animate_done,
+.screen-5_subHeading_animate_done {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+
+
+/* 定义帧动画 */
+@keyframes boune {
+  0%,100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+
+}
+
+/* 使用帧动画 */
+.screen-2_point::before,
+.screen-2_point::after {
+  content:' ';
+  display: block;
+  width: 22px;
+  height: 22px;
+  animation: boune 1.5s infinite;
+  border-radius: 50% 50%;
+  background-color: #ff0101;
+  opacity: .2;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.screen-2_point_i-1::before,
+.screen-2_point_i-1::after {
+  left: auto;
+  right: 0;
+}
+
+.screen-2_point::before {
+  animation: boune 1.5s infinite 1s;
+  opacity: .2;
+}
+
+
+/* header头部 导航条 的动画效果 */
+.header {
+   width: 100%;
+   position:fixed;
+   transition: all .5s;
+   top: 0;
+   left: 0;
+   z-index: 5;
+ }
+
+.header_status_black {
+  background-color: rgba(0,0,0,.5);
+}
+
+.header_status_black .header_wrap_logo,
+.header_status_black .header_wrap_nav_item {
+  color: #fff;
+}
+
+.header_status_black .header_wrap_nav_item:hover,
+.header_status_black .header_wrap_nav_item:active {
+  color: #ff0101;
+}
+
+.header_status_black .header_wrap_nav_item_statusActive {
+  color: #ff0101;
+}
+
+.header_status_black .header_wrap_nav_item_statusActive——liner {
+  content: " ";
+  display: table;
+  width: 100%;
+  height: 2.1px;
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #ff0101;
+  transition: all 1s;
+  z-index: 100;
+}
+
+/* outline 大纲的动画效果 */
+.outline {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.outline_status_init {
+  opacity: 1;
+}
+
+.outline_item {
+  transition: all 1s;
+}
+
+/* outline 大纲的字体颜色跳转效果 */
+.outline_item_statusActive {
+  color: #ff0101;
+}
+
+/* 鼠标悬停在大纲上面，字体变红 */
+.outline_item:hover {
+  color: #ff0101;
+}
+  /* outlines[i].id = i;
+  headerItems[i].onclick = function(){
+    console.log(sclTop)
+    sclTop=i*800; */
+this.title*800+1

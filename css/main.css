@@ -1,0 +1,463 @@
+/* BEM设计模式 */
+
+/*
+
+模块 （没有前缀；多个单词用 - 链接）
+元素（元素在模块之后，可以有多个层级，以 _ 连接）
+修饰（某元素、或者某模块特别的状态，必须有一个状态名或状态值，使用 _ 链接）
+
+ */
+
+
+.header {
+	background-color: #fafafa;
+}
+.header_wrap {
+  margin: 0 auto;
+  width: 1200px;
+  height: 70px;
+  position: relative;
+}
+.header_wrap_logo {
+	width: 150px;
+	height: 38px;
+  line-height: 38px;
+	font-size: 20px;
+	color: #3e4245;
+	text-indent: 50px;
+	background: url('../img/logo.png') no-repeat;
+	background-position: left center;
+	background-size: 38px 38px;
+  margin: auto auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%)
+}
+
+.header_wrap_nav {
+  position: absolute;
+  right: 20px;
+  height: 38px;
+  top: 50%;
+  transform: translate(0, -50%);
+  line-height: 38px;
+}
+
+.header_wrap_nav_item {
+  width: 58px;
+  text-align: center;
+  height: 38px;
+  font-size: 14px;
+  color: #3e4246;
+  margin-left: 40px;
+  float: left;
+  position: relative;
+  transition: 1s;
+  z-index: 20;
+}
+
+.header_wrap_nav_item_customButtom {
+  width: 90px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.header_wrap_nav_item:hover,
+.header_wrap_nav_item:active {
+  color: #ff0101;
+}
+
+.header_wrap_nav_item_statusActive {
+  color: #ff0101;
+}
+
+.header_wrap_nav_item_statusActive——liner {
+  content: " ";
+  display: table;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #ff0101;
+  transition: all 1s;
+  z-index: 100;
+}
+
+
+/* 第一屏 */
+.screen-1 {
+  height: 800px;
+  background-color: #e7e7e7;
+  background: url('../img/bg-screen-1.png') no-repeat center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-1_heading {
+  margin: 0;
+  padding: 0;
+  font-size: 46px;
+  color: #4d555d;
+  text-align: center;
+  padding-top: 152px;
+}
+
+.screen-1_heading b {
+   color: #ff0101;
+   font-weight: normal;
+}
+
+.screen-1_iphone {
+  position: absolute;
+  width: 1375px;
+  height: 305px;
+  background: url('../img/screen-1-phone.png') no-repeat center;
+  left: 50%;
+  margin-left: calc(-1375px / 2);
+  bottom: 180px;
+  z-index: 1;
+}
+
+.screen-1_shadow {
+  position: absolute;
+  width: 1233px;
+  height: 411px;
+  background: url('../img/screen-1-shadow.png') no-repeat center;
+  left: 50%;
+  margin-left: calc(-1233px / 2);
+  bottom: 20px;
+  opacity: 0.8;
+}
+
+/* 第二屏 */
+.screen-2 {
+  height: 800px;
+  background-color: #fafafa;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-2_heading {
+  font-size: 46px;
+  line-height: 46px;
+  color: #ff0101;
+  text-align: center;
+  padding-top: 96px;
+}
+
+.screen-2_subHeading {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 25px;
+  line-height: 28px;
+  color: #2c3137;
+}
+
+.screen-2_iphone {
+  width: 928px;
+  height: 873px;
+  background: url('../img/bg-screen-2.png') no-repeat center;
+  position: absolute;
+  left: 50%;
+  margin-left: calc( -928px / 2);
+  bottom: -345px;
+}
+
+.screen-2_point {
+  width: 108px;;
+  height: 22px;
+  padding-right: 112px;
+  font-size: 22px;
+  line-height: 22px;
+  color: #4d555d;
+  background: url('../img/icon-point-right.png') no-repeat right center;
+  position: absolute;
+}
+
+.screen-2_point_custom_right {
+  padding: 0 0 0 112px;
+  background: url('../img/icon-point-left.png') no-repeat left center
+}
+
+.screen-2_point_i-1 {
+  top: 150px;
+  left: -164px;
+}
+
+.screen-2_point_i-2 {
+  top: 30px;
+  right: 164px;
+}
+
+.screen-2_point_i-3 {
+  top: 330px;
+  right: 30px;
+}
+
+
+/* 第三屏 */
+.screen-3 {
+  height: 800px;
+  background-color: #a71316;
+
+  position: relative;
+}
+
+.screen-3_wrap {
+  width: 1200px;
+  height: 800px;
+  position:relative;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+
+.screen-3_heading {
+  font-size: 36px;
+  line-height: 36px;
+  color: #fff;
+  text-align: left;
+  padding-top: 96px;
+}
+
+.screen-3_subHeading {
+  font-size: 14px;
+  text-align: left;
+  padding-top: 25px;
+  line-height: 28px;
+  color: #fff;
+}
+
+.screen-3_iphone {
+  width: 729px;
+  height: 900px;
+  background: url('../img/bg-screen-3.png') no-repeat center;
+  position: absolute;
+  right: 0;
+  top: 200px;
+}
+
+.screen-3_feature {
+  width: 328px;
+  height: 288px;
+  position: absolute;
+  bottom: 140px;
+}
+
+.screen-3_feature_item {
+  box-sizing: border-box;
+  padding-top: 20px;
+  float: left;
+  width: 138px;
+  height: 118px;
+  border-radius: 3px;
+  border: 1px solid #cb7173;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  margin: 0 24px 24px 0;
+}
+
+.screen-3_feature_item_number {
+  line-height: 50px;
+}
+
+.screen-3_featureitem_item_desc {
+  font-size: 14px;
+  line-height: 14px;
+  padding-top: 10px;
+}
+
+
+/* 第四屏 */
+.screen-4 {
+  height: 800px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-4_wrap {
+  width: 1200px;
+  height: 800px;
+  position:relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.screen-4_heading {
+  font-size: 42px;
+  line-height: 36px;
+  color: #ff0101;
+  text-align: center;
+  padding-top: 96px;
+}
+
+.screen-4_subHeading {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 29px;
+  line-height: 28px;
+  color: #222;
+}
+
+.screen-4_type {
+  margin: 0 auto;
+  width: 1250px;
+  height: 270px;
+  margin-top: 100px;
+}
+
+.screen-4_type_item {
+  width: 220px;
+  height:270px;
+  margin-right: 90px;
+  float: left;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+}
+
+ .screen-4_type_item_i_1 {
+  background: url('../img/phone-1.png') no-repeat top left;
+ }
+
+ .screen-4_type_item_i_2 {
+  background: url('../img/phone-2.png') no-repeat top left;
+ }
+
+ .screen-4_type_item_i_3 {
+  background: url('../img/phone-3.png') no-repeat top left;
+ }
+
+ .screen-4_type_item_i_4 {
+  background: url('../img/phone-4.png') no-repeat top left;
+ }
+
+.screen-4_type_item_color {
+  width: 100%;
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #2c3238;
+  position: absolute;
+  bottom: -44px;
+}
+
+.screen-4_type_item_storage {
+  width: 100%;
+  height: 12px;
+  line-height: 12px;
+  font-size: 12px;
+  color: #ccc;
+  position: absolute;
+  bottom: -66px;
+}
+
+
+
+.screen-5 {
+  height: 800px;
+  background-color: #d9dbe1;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-5_heading {
+  font-size: 42px;
+  line-height: 36px;
+  color: #ff0101;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.screen-5_subHeading {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 29px;
+  line-height: 28px;
+  color: #222;
+}
+
+.screen-5_background {
+  position: absolute;
+  bottom: -150px;
+  width: 1920px;
+  height: 450px;
+  background-image: url('../img/bg-screen-5.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  left: 50%;
+  margin-left: calc(-1920px /2);
+}
+
+.screen-buy {
+  padding: 120px 0;
+  background-color: #2b333b;
+  position: relative;
+  overflow: hidden;
+  background-image: url('../img/bg-screen-buy.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+
+.screen-buy_buttom {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 240px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 24px;
+  background-color: #ff0101;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,.5);
+  transition: all .5s;
+}
+
+.screen-buy_buttom:hover {
+  box-shadow: 0 0px 10px 5px rgba(0,0,0,.5);
+  transform: translate(0,-10px)
+}
+
+.footer {
+  height: 80px;
+  background-color: black;
+  color: #fff;
+  line-height: 80px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* 大纲 */
+.outline {
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  color: #ccc;
+}
+
+.outline_item {
+  display: block;
+  width: 40px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.outline_item:last-child {
+  border: none;
+}

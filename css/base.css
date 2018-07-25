@@ -1,0 +1,94 @@
+/* 根元素字体大小设置为10px,其他所有子元素字体大小都继承子元素 */
+html {
+	font-size: 62.5%;
+}
+
+
+/* 工具样式 */
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+.inviseble {
+	visibility: hidden;
+}
+
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.one-line-text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.many-line-text-ellipsis {
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	display: -wibkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: " ";
+	display: table;
+}
+
+.clearfix::after {
+	clear: both;
+}
+
+
+/* 自定义页面样式 */
+
+body {
+	font-family: "微软雅黑";
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
